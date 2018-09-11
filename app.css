@@ -1,0 +1,55 @@
+
+
+
+
+
+/*#toDoContainer {
+	width: 360px;
+	margin: 0 auto;
+	border: 2px solid gray;
+
+}
+
+.completedItem {
+	color: gray;
+	text-decoration: line-through;
+}*/
+
+/*#calendar {
+
+}*/
+
+/*add graphic animation using canvas*/
+/*canvas {
+	background: pink;
+}*/
+
+/*h1 {
+	text-align: center
+}
+
+input {
+	display: block;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none
+}
+
+span {
+	background: white;
+	height: 40px;
+	margin-right: 10px;
+	text-align: center;
+	color: red;
+	width: 0px;
+	display: inline-block;
+	transition: 0.5s linear;
+	opacity: 0;
+}
+
+li:hover span {
+	width: 10px;
+	opacity: 1;
+}*/
