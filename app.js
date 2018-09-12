@@ -1,21 +1,32 @@
 $(document).ready(function() { 
+Storage.prototype.setObject = function(key, value) {
+  this.setItem(key, JSON.stringify(value));
+}
+
+Storage.prototype.getObject = function(key) {
+  return JSON.parse(this.getItem(key));
+}
 // create a class for the item input
 var Item = function(name) {
   this.name;
 }
 // create an empty array to push inputs into
-var itemArr = [];
+// var itemArr = [];
 
 //JSON stringify array to push to localstorage and then parseJSON to retreive array info
-localStorage.setItem(itemKey, JSON.stringify(itemArr))
-var data = JSON.parse(localStorage.getItem(itemKey))
+// localStorage.setItem(itemKey, JSON.stringify(itemArr))
+// var data = JSON.parse(localStorage.getItem(itemKey))
 
 var itemKey = $(".user-input").val(); //not used...
+
+// create an empty array to push inputs into
+var itemArr = [];
+// itemArr.push(itemKey)
 
 
 // function to display items from localStorage
 var listItems = function() {
-  var data = localStorage.getItem(itemKey)
+  // var data = localStorage.getItem(itemKey)
   for(var i = 0; i < localStorage.length; i++) {
     $("ul").append("<li><span><i class ='fa fa-trash'></i></span>" + localStorage.key(i) + "<span><i class='fa fa-exclamation'></i></span></li>")
   }
@@ -37,8 +48,10 @@ $(".user-input").keypress(function(e) {
   if (e.which === 13) {
     // var item = new Item($(this).val()); //class instantiation //revisit, need to figure out how to pass into objects
     var itemKey = $(this).val()
-    localStorage.setItem(itemKey, itemKey)
-    // localStorage.setItem(itemKey, JSON.stringify(item)); //adds item to localStorage
+    itemArr.push(itemKey)
+    console.log(itemArr)
+    localStorage.setItem(itemKey, itemKey) //do localStorage.setItem(itemKey, JSON.stringify(itemArr))
+    // localStorage.setItem(itemKey, JSON.stringify(itemArr)); //adds item to localStorage
     $(this).val(""); //resets the input value
     $("ul").append("<li><span><i class ='fa fa-trash'></i></span>" + itemKey + "<span><i class='fa fa-exclamation'></i></span></li>")
   }
@@ -71,6 +84,9 @@ $("ul").on("click", "i.fa.fa-exclamation", function(e) { //has to be on ul for a
 // add sound icon to play music
 
 // add corgi icon, if clicked, play "Friday" song
+$(".corgi").on("click", function() {
+  $(".friday").toggle(".fridayDisplay") //why toggleClass not work?
+})
 
 // if item object does not have "passport or id" - have meaningful error pop up to remind to bring id
 

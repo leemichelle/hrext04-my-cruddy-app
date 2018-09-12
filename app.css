@@ -1,23 +1,18 @@
 .fa.fa-music{
 	font-size: 30px;
 	color: gray;
+/*	margin: 50px;*/
+    padding-left: 300px;
 	border: 2px solid pink;
-}
-
-.friday {
-
-}
-
-.corgi {
-	width: 60px;
-	height: 40px;
-	border: 2px solid orange;
+/*	display: inline;*/
 }
 
 
 .input-container {
+	margin-left: 50px;
+	padding-left: 20px;
+	padding-right: 50px;
 	width: 360px;
-	margin: 0;
 	border: 2px solid green;
 
 }
@@ -44,8 +39,11 @@ h1 {
 }
 
 input {
+	padding-right: 70px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	display: block;
-	margin: 100;
+	margin-left: 30px;
 	border: 2px solid purple;
 }
 
@@ -55,8 +53,10 @@ ul {
 
 
 span {
-	background: white;
-	height: 40px;
+/*	background: white;*//* not needed*/
+	height: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 	margin-right: 10px;
 	text-align: center;
 	color: red;
@@ -73,5 +73,61 @@ li:hover span {
 }
 
 body {
-	background-color: yellow;
+	background-color: white;
+}
+
+/*
+.fridayVideo {
+	width: 500px;
+	height: 300px;
+    background: blue;
+}*/
+/*.music {
+	padding-left: 50px;
+	border: 2px solid aqua;
+}*/
+
+.friday {
+/*	display: none;*/
+/*	transition: ease;*/
+	padding-left: 600px;
+/*	width: 200px;*/
+	height: 0px;
+    margin: 0px auto;
+    border: 2px solid purple;
+}
+
+.fridayDisplay {
+	display: none;
+}
+
+/*.friday:hover .fridayVideo{
+
+}*/
+
+.corgiContainer {
+	padding-left: 350px;
+	padding-top: 70px;
+/*	padding-bottom: 50px*/
+	border: 2px solid orange;
+	display: inline;
+}
+
+.corgi {
+	padding-top: 50px
+/*	margin: 0px;*/
+/*	display: inline;*/
+	padding-bottom:10px;
+	width: 60px;
+	height: 40px;
+	border: 2px solid red;
+}
+
+li {
+	font-family: "Arial";
+}
+
+li:nth-child(2n) {
+	background-color: #EDEBFA;
+	border: 2px solid red;
 }
