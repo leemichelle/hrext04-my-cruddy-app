@@ -3,9 +3,23 @@
 
 
 
-/*#toDoContainer {
+
+
+
+
+/*.friday {
+
+}
+
+.corgi {
+	width: 60px;
+	height: 40px;
+}*/
+
+
+.input-container {
 	width: 360px;
-	margin: 0 auto;
+	margin: 0;
 	border: 2px solid gray;
 
 }
@@ -13,7 +27,7 @@
 .completedItem {
 	color: gray;
 	text-decoration: line-through;
-}*/
+}
 
 /*#calendar {
 
@@ -24,13 +38,13 @@
 	background: pink;
 }*/
 
-/*h1 {
+h1 {
 	text-align: center
 }
 
 input {
 	display: block;
-	margin: 0 auto;
+	margin: 100;
 }
 
 ul {
@@ -52,4 +66,4 @@ span {
 li:hover span {
 	width: 10px;
 	opacity: 1;
-}*/
+}

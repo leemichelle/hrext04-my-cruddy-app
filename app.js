@@ -1,115 +1,70 @@
-// $(document).ready(function() {
-//   // Check off to-do's by clicking
-//   $("ul").on("click", "li", function() { //specifying all li elements on ul will make event apply to any future new li's
-//     $(this).toggleClass("completedItem");
-//   });
+$(document).ready(function() { 
+// create a class for the item input
+var Item = function(name) {
+  this.name;
+}
+// create an empty array to push inputs into
 
-//   let inputKeyValue = $("input[type='text']").val()
+//JSON stringify array to push to localstorage and then parseJSON to retreive array info
 
-//   //Click on trash can to delete to-do
-//   $("ul").on("click", "span", function(e) { //has to be on parent element, ul
-//     $(this).parent().fadeOut(function(){
-//       // localStorage.removeItem(inputKeyValue) //not work
-//       $(this).remove();
-//     })
-//     e.stopPropagation(); //span is inside li so any li event will be triggered too
-//   });
-
-//   $("input[type='text']").keypress(function(e){
-//     if(e.which === 13) { //enter key is number 13, .which checks for which button was pressed
-//       var toDo = $(this).val();
-//       localStorage.setItem(toDo, toDo)
-//       $(this).val(""); //resets input area each time
-//       $("ul").append("<li><span><i class ='fa fa-trash'></i></span><span><i class='fa fa-exclamation'></i></span> " + toDo + "</li>")
-//     }
-//   });
-
-// });
+var itemKey = $(".user-input").val();
 
 
-/*
-  $("body").css()
+// function to display items from localStorage
+var listItems = function() {
+  var data = localStorage.getItem(itemKey)
+  for(var i = 0; i < localStorage.length; i++) {
+    $("ul").append("<li><span><i class ='fa fa-trash'></i></span><span><i class='fa fa-exclamation'></i></span>" + localStorage.key(i) + "</li>")
+  }
+}
 
-  *(7) different pages for different "to-do's"
-  *(8?) pick different background for each page(grocery store background, travel background, general paper background)
-      getAttribute, setAttribute
-  *(5) add option for due date
-  *(7) time stamp (days left until event if list has due date)
-  *(3) strikethrough when completed task (and maybe move completed task to bottom of list?)
-      -use toggle to strikethrough and unstrikethrough if user wants to undo
-  *(8) secret corgi functionality (it's a secret so I can't reveal much)
-  *(3) mark important "to-do"
-  *(7) show deleted items and allow for undelete
-  *(5) ability to select and delete multiple items (have a delete checkbox and master delete icon)
+//invoke function so that page always displays previous localStorage data
+listItems(); 
 
-Make object to add different pages with method to create different background for each page 
-
-
-*/
+//add item to localStorage
+var addItem = function(name) {
+  var item = new Item(name)
+  // localStorage.setItem(itemKey, item) //itemKey is not defined
+}
 
 
+// input to-do, display on html, & store to local storage
+$(".user-input").keypress(function(e) {
+  if (e.which === 13) {
+    // var item = new Item($(this).val()); //class instantiation //revisit, need to figure out how to pass into objects
+    var itemKey = $(this).val()
+    localStorage.setItem(itemKey, itemKey)
+    // localStorage.setItem(itemKey, JSON.stringify(item)); //adds item to localStorage
+    $(this).val(""); //resets the input value
+    $("ul").append("<li><span><i class ='fa fa-trash'></i></span><span><i class='fa fa-exclamation'></i></span>" + itemKey + "</li>")
+  }
+})
 
-// $(document).ready(function() {
+// delete to-do upon click, also remove from local storage
+  // hover over text for option
+$("ul").on("click", "span", function(e) {
+  $(this).parent().fadeOut(function() {
+    localStorage.removeItem($(this).text()) //retrieves key info from text on 'this' object
+    $(this).remove();
+  })
+})
 
-//   $(".add-text-btn").on("click", function(){
+// strikethrough to-do upon clicking on text (use toggle to unstrikethrough)
+$("ul").on("click", "li", function() { //specifying all li elements on ul will make event apply to any future new li's
+  $(this).toggleClass("completedItem");
+});
 
-//     // store values
-//     let inputKey = $(".user-input-key").val();
-//     let inputValue = $(".user-input-value").val();
+// input due date option
 
-//     // clear values
-//     $(".user-input-key").val("");
-//     $(".user-input-value").val("");
+// mark important 
+  // hover over text for this option
 
-//     // console.log(inputKey, inputValue);
+// add sound icon to play music
 
-//     localStorage.setItem(inputKey, inputValue);
-//     // data-
-//     let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' +  localStorage.getItem(inputKey) + '</div>';
-//     $(".display").html(itemHtml);
-//     //console.log(localStorage);
-//     // how can we delegate this event to the outer html node?
-//     // https://learn.jquery.com/events/event-delegation/
+// add corgi icon, if clicked, play "Friday" song
 
-//     $(".display-item").on("click", function(e){
-//       // plop the key:value back into the input boxes
+// if item object does not have "passport or id" - have meaningful error pop up to remind to bring id
 
-//       // get the values from the the divs?
-//       // console.log("key=> ", e.target.dataset.storageKey); // user-input-key
-//       localStorage.getItem(e.target.dataset.storageKey); // user-input-value
+// toggle background?
 
-//       // set those values in the form fields
-//       $(".user-input-key").val(e.target.dataset.storageKey);
-//       $(".user-input-value").val(localStorage.getItem(e.target.dataset.storageKey));
-//     });
-
-//   });
-
-
-
-//    // TODO add back in later
-//    // $(".user-input").on("keyup", function(){
-//    //   let inputValue = $(".user-input").val();
-//    //   localStorage.setItem("testStorage", inputValue);
-//    //   $(".display").text(localStorage.getItem("testStorage"));
-//    // });
-
-//    $(".del-text-btn").on("click", function() {
-//      alert('item deleted? check the console'); // maybe change to a window.confirm
-//      localStorage.removeItem( $('.user-input-title').val() ); // grab the title and plop here
-//      $(".user-input-title").val("");
-//      $(".user-input-body").val("");
-//      // clearing display? what if I have multiple items?
-//      // after item is removed from local storage, redisplay items from local storage
-//      // refresh from storage?
-//    });
-
-
-//    // iterative approach to adding items
-//    // store data as stringified array of objects
-//    // store data with individual keys
-//   // how do we get keys? research Object.keys
-
-
-
-// });
+});
