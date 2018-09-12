@@ -1,26 +1,24 @@
+.fa.fa-music{
+	font-size: 30px;
+	color: gray;
+	border: 2px solid pink;
+}
 
-
-
-
-
-
-
-
-
-/*.friday {
+.friday {
 
 }
 
 .corgi {
 	width: 60px;
 	height: 40px;
-}*/
+	border: 2px solid orange;
+}
 
 
 .input-container {
 	width: 360px;
 	margin: 0;
-	border: 2px solid gray;
+	border: 2px solid green;
 
 }
 
@@ -29,6 +27,9 @@
 	text-decoration: line-through;
 }
 
+.important {
+	color: red;
+}
 /*#calendar {
 
 }*/
@@ -45,11 +46,13 @@ h1 {
 input {
 	display: block;
 	margin: 100;
+	border: 2px solid purple;
 }
 
 ul {
 	list-style: none
 }
+
 
 span {
 	background: white;
@@ -61,9 +64,14 @@ span {
 	display: inline-block;
 	transition: 0.5s linear;
 	opacity: 0;
+	border: 2px solid blue;
 }
 
 li:hover span {
 	width: 10px;
 	opacity: 1;
+}
+
+body {
+	background-color: yellow;
 }
