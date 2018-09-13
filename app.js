@@ -1,4 +1,19 @@
 $(document).ready(function() { 
+
+// click on icon to open up canvas animation
+$("i.fa.fa-question-circle").on("click", function() {
+  $("#myCanvas").show();
+  $(".listBody").hide();
+  $("i.fa.fa-list-ul").show();
+})
+
+//click on list icon to go back to to-do list
+$("i.fa.fa-list-ul").on("click", function() {
+  $("#myCanvas").hide();
+  $(".listBody").show();
+  $("i.fa.fa-list-ul").hide();
+})
+
 Storage.prototype.setObject = function(key, value) {
   this.setItem(key, JSON.stringify(value));
 }
@@ -85,10 +100,14 @@ $("ul").on("click", "i.fa.fa-exclamation", function(e) { //has to be on ul for a
 
 // add corgi icon, if clicked, play "Friday" song
 $(".corgi").on("click", function() {
-  $(".friday").toggle(".fridayDisplay") //why toggleClass not work?
+  $(".friday").css("float", "right")
+  $(".friday").show(); //why toggleClass not work?
 })
 
-// if item object does not have "passport or id" - have meaningful error pop up to remind to bring id
+$(".corgi").on("dblclick", function() {
+  $(".friday").hide(); //why toggleClass not work?
+})
+
 
 // toggle background?
 

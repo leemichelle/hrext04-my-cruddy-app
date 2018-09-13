@@ -1,20 +1,52 @@
-.fa.fa-music{
+.fa.fa-question-circle{
 	font-size: 30px;
-	color: gray;
-/*	margin: 50px;*/
-    padding-left: 300px;
-	border: 2px solid pink;
-/*	display: inline;*/
+	color: #A1C2E1;
+/*	border: 2px solid pink;*/
+	float: right;
 }
 
+/*.myCanvas {
+	opacity: 0.5;
+	background: transparent;
+}*/
+
+#myCanvas {
+	width: 100%;
+	display: inline-block
+	border: 2px solid red;
+/*	opacity: 0.1;*/
+	display: none;
+	float: right;
+/*	background-color: black*/
+}
+
+.fa.fa-list-ul {
+	font-size: 30px;
+	color: #F7FBFF;
+	display: none;
+}
+
+.listBody {
+
+/*	display: none;*/
+}
 
 .input-container {
-	margin-left: 50px;
+	margin-left: 600px;
+	margin-top: 50px;
 	padding-left: 20px;
 	padding-right: 50px;
+	padding-bottom: 100px;
 	width: 360px;
-	border: 2px solid green;
-
+/*	border: 2px solid green;*/
+/*	background-image: url(https://t4.ftcdn.net/jpg/00/64/52/13/240_F_64521338_KL2vISllaKCaqslllKl7tjjRW4yPNZ6Y.jpg);*/
+	background-size: 900px ;
+	box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/*	display: inline-block;*/
+	float: left;
+	background-color: #F7FBFF;
+	opacity: 0.9;
+	border-radius: 20px
 }
 
 .completedItem {
@@ -23,28 +55,33 @@
 }
 
 .important {
-	color: red;
+	color: #E62016;
+	font-weight: bold;
 }
-/*#calendar {
 
-}*/
 
-/*add graphic animation using canvas*/
-/*canvas {
-	background: pink;
-}*/
+.listHeader {
+	width: 405px;
+/*	border: 2px solid orange;*/
+}
 
-h1 {
-	text-align: center
+h2 {
+	text-align: center;
+	font-family: "Arial Black";
+	color: #246D95;
+	font-size: 30px;
 }
 
 input {
-	padding-right: 70px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-right: 150px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-bottom: 10px;
 	display: block;
-	margin-left: 30px;
-	border: 2px solid purple;
+	margin-left: 40px;
+	font-size: 16px;
+	border-radius: 5px;
+/*	border: 2px solid purple;*/
 }
 
 ul {
@@ -64,70 +101,74 @@ span {
 	display: inline-block;
 	transition: 0.5s linear;
 	opacity: 0;
-	border: 2px solid blue;
+/*	border: 2px solid blue;*/
 }
 
 li:hover span {
-	width: 10px;
+	width: 25px;
 	opacity: 1;
 }
 
 body {
-	background-color: white;
+	background-image: url(https://www.outtraveler.com/sites/outtraveler.com/files/2016/09/23/postcardsforonline.jpg);
+	background-size: 1700px 900px;
 }
 
-/*
-.fridayVideo {
-	width: 500px;
-	height: 300px;
-    background: blue;
-}*/
-/*.music {
-	padding-left: 50px;
-	border: 2px solid aqua;
-}*/
+
+
 
 .friday {
-/*	display: none;*/
-/*	transition: ease;*/
-	padding-left: 600px;
-/*	width: 200px;*/
+	padding-left: 50px;
 	height: 0px;
-    margin: 0px auto;
-    border: 2px solid purple;
+	padding-top: 50px;
+    margin: auto;
+/*    border: 2px solid purple;*/
+/*    float: right;*/
+    display: none;
 }
 
 .fridayDisplay {
 	display: none;
 }
 
-/*.friday:hover .fridayVideo{
 
-}*/
-
+/*
 .corgiContainer {
 	padding-left: 350px;
 	padding-top: 70px;
-/*	padding-bottom: 50px*/
+	padding-bottom: 50px
 	border: 2px solid orange;
 	display: inline;
-}
+}*/
 
 .corgi {
-	padding-top: 50px
-/*	margin: 0px;*/
-/*	display: inline;*/
-	padding-bottom:10px;
-	width: 60px;
-	height: 40px;
-	border: 2px solid red;
+/*	margin-left: 0px;*/
+	width: 50px;
+	height: 35px;
+/*	border: 2px solid red;*/
+	float: right;
 }
 
 li {
 	font-family: "Arial";
+	cursor: pointer;
+	font-size: 18px;
 }
 
 li:nth-child(2n) {
-	background-color: #EDEBFA;
-	border: 2px solid red;
+	background-color: #ACCBE7;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+/*	border: 2px solid red;*/
 }
+
+
+/*#calendar {
+
+}*/
+
+/*add graphic animation using canvas*/
+/*canvas {
+	background: pink;
+}*/
+
