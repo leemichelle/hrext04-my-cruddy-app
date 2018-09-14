@@ -147,12 +147,26 @@ body {
 }
 
 
-/*#calendar {
+/* * * * * * * * * * * * * * * * * * * * * * * * * * 
+              NOTES TO REVISIT
+* * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-}*/
+// make page elements change as screen size changes
+  // currently page elements are set with specific dimensions
 
-/*add graphic animation using canvas*/
-/*canvas {
-	background: pink;
-}*/
+// icons still difficult to move around, still need more practice
+
+// elements to add later:
+  // calendar
+  // calendar date input box
+  // sound icon
+  // plus sign for adding more notes
+  // left/right button if using slide background functionality
+
+add graphic animation using canvas...or not
+
+*/
+
+
+
 
