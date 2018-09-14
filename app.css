@@ -1,70 +1,3 @@
-.fa.fa-question-circle{
-	font-size: 30px;
-	color: #A1C2E1;
-/*	border: 2px solid pink;*/
-	float: right;
-}
-
-/*.myCanvas {
-	opacity: 0.5;
-	background: transparent;
-}*/
-
-#myCanvas {
-	width: 100%;
-	display: inline-block
-	border: 2px solid red;
-/*	opacity: 0.1;*/
-	display: none;
-	float: right;
-/*	background-color: black*/
-}
-
-.fa.fa-list-ul {
-	font-size: 30px;
-	color: #F7FBFF;
-	display: none;
-}
-
-.listBody {
-
-/*	display: none;*/
-}
-
-.input-container {
-	margin-left: 600px;
-	margin-top: 50px;
-	padding-left: 20px;
-	padding-right: 50px;
-	padding-bottom: 100px;
-	width: 360px;
-/*	border: 2px solid green;*/
-/*	background-image: url(https://t4.ftcdn.net/jpg/00/64/52/13/240_F_64521338_KL2vISllaKCaqslllKl7tjjRW4yPNZ6Y.jpg);*/
-	background-size: 900px ;
-	box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-/*	display: inline-block;*/
-	float: left;
-	background-color: #F7FBFF;
-	opacity: 0.9;
-	border-radius: 20px
-}
-
-.completedItem {
-	color: gray;
-	text-decoration: line-through;
-}
-
-.important {
-	color: #E62016;
-	font-weight: bold;
-}
-
-
-.listHeader {
-	width: 405px;
-/*	border: 2px solid orange;*/
-}
-
 h2 {
 	text-align: center;
 	font-family: "Arial Black";
@@ -109,46 +42,6 @@ li:hover span {
 	opacity: 1;
 }
 
-body {
-	background-image: url(https://www.outtraveler.com/sites/outtraveler.com/files/2016/09/23/postcardsforonline.jpg);
-	background-size: 1700px 900px;
-}
-
-
-
-
-.friday {
-	padding-left: 50px;
-	height: 0px;
-	padding-top: 50px;
-    margin: auto;
-/*    border: 2px solid purple;*/
-/*    float: right;*/
-    display: none;
-}
-
-.fridayDisplay {
-	display: none;
-}
-
-
-/*
-.corgiContainer {
-	padding-left: 350px;
-	padding-top: 70px;
-	padding-bottom: 50px
-	border: 2px solid orange;
-	display: inline;
-}*/
-
-.corgi {
-/*	margin-left: 0px;*/
-	width: 50px;
-	height: 35px;
-/*	border: 2px solid red;*/
-	float: right;
-}
-
 li {
 	font-family: "Arial";
 	cursor: pointer;
@@ -160,6 +53,97 @@ li:nth-child(2n) {
 	border-radius: 5px;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 /*	border: 2px solid red;*/
+}
+
+body {
+	background-image: url(https://www.outtraveler.com/sites/outtraveler.com/files/2016/09/23/postcardsforonline.jpg);
+	background-size: 1700px 900px;
+	position: relative;
+}
+
+.fa.fa-question-circle{
+	font-size: 30px;
+	color: #A1C2E1;
+/*	border: 2px solid pink;*/
+	float: right;
+}
+
+
+#myCanvas {
+	width: 100%;
+	display: inline-block
+	border: 2px solid red;
+/*	opacity: 0.1;*/
+	display: none;
+	float: right;
+/*	background-color: black*/
+}
+
+.fa.fa-list-ul {
+	font-size: 30px;
+	color: #F7FBFF;
+	display: none;
+}
+
+.listBody {
+/*	display: none;*/
+}
+
+.input-container {
+	margin-left: 600px;
+	margin-top: 50px;
+	padding-left: 20px;
+	padding-right: 50px;
+	padding-bottom: 100px;
+	width: 360px;
+/*	border: 2px solid green;*/
+/*	background-image: url(https://t4.ftcdn.net/jpg/00/64/52/13/240_F_64521338_KL2vISllaKCaqslllKl7tjjRW4yPNZ6Y.jpg);*/
+	background-size: 900px ;
+	box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/*	display: inline-block;*/
+	float: left;
+	background-color: #F7FBFF;
+	opacity: 0.9;
+	border-radius: 20px;
+}
+
+.completedItem {
+	color: gray;
+	text-decoration: line-through;
+}
+
+.important {
+	color: #E62016;
+	font-weight: bold;
+}
+
+
+.listHeader {
+	width: 405px;
+/*	border: 2px solid orange;*/
+}
+
+
+.friday {
+	padding-left: 50px;
+	height: 0px;
+	padding-top: 50px;
+    margin: auto;
+/*    border: 2px solid purple;
+    float: right;
+*/    display: none;
+}
+
+.fridayDisplay {
+	display: none;
+}
+
+
+.corgi {
+	width: 50px;
+	height: 35px;
+/*	border: 2px solid red;*/
+	float: right;
 }
 
 
