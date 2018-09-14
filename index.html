@@ -14,19 +14,19 @@
    
     <script type="text/paperscript" canvas="myCanvas">
       
-        var circles = [];
+        var circleArr = [];
         function onKeyDown(event){
           var maxPoint = new Point(view.size.width, view.size.height);
           var randomPoint = Point.random();
-          var point = maxPoint * randomPoint;
-          var newCircle = new Path.Circle(point, 5);
+          var newPoint = maxPoint * randomPoint;
+          var newCircle = new Path.Circle(newPoint, 5);
           newCircle.fillColor = "yellow"
-          circles.push(newCircle);
+          circleArr.push(newCircle);
         }
 
         function onFrame(event){
-          for (var i = 0; i < circles.length; i++) {
-            circles[i].fillColor.hue+=1;
+          for (var i = 0; i < circleArr.length; i++) {
+            circleArr[i].fillColor.hue+=1;
           }
         }
 
@@ -46,8 +46,8 @@
 
         <input class="user-input" type="text" placeholder="Gurl whatchu need?">
         <p></p>
-        <input class="due-date" type="text" placeholder="Due Date">
-
+        <!-- <input class="due-date" type="text" placeholder="Due Date">
+ -->
         <ul>
         </ul>
 
@@ -57,6 +57,9 @@
         <iframe class="fridayVideo" width="560" height="315" src="https://www.youtube.com/embed/kfVsfOSbJY0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
 
+
+<!--       <div class="meh">
+      </div> -->
       <!-- <i class="fa fa-list-ul"></i> -->
 
 <!--       <canvas id="myCanvas" resize>
